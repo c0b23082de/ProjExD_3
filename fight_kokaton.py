@@ -176,8 +176,8 @@ def main():
 
         for i in range(len(bombs)):
             if beam is not None:
-                if bomb[i].rct.colliderect(beam.rct):
-                    bomb[i] = None
+                if bombs[i].rct.colliderect(beam.rct):
+                    bombs[i] = None
                     beam = None
                     bird.change_img(6, screen)
         bombs = [bomb for bomb in bombs if bomb is not None]
